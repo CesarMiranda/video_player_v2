@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css" media="all">
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<title>Video Player</title>
+</head>
+<body>
+	<div class="container">
+		<div id="video-container">
+			<video id="video_sample" onMouseOver="showControls()" onMouseOut="hideControls()">
+				<source src="video/video.mp4" type="video/mp4">
+				<source src="video/video.ogg" type="video/ogg">
+				<track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
+			</video>
+			<div class="controls-container" id="controls-container" onMouseOver="showControls()">
+				<div id="container-bar">
+					<progress id="progress-bar" max="100" value="0"></progress>
+					<div class="buffered">
+						<span id="buffered-amount"></span>
+					</div>
+				</div>
+				<div class="clearfix" id="media-controls" onMouseOver="showControls()" onMouseOut="hideControls()">
+					<button class="play-pause-btn" id="play_pause"></button>
+					<div id="time-progress">
+						<span id="current-time">00:00</span> / <span id="duration-time">00:00</span>
+					</div>
+					<button class="full-screen-btn" id="fullscreen"></button>
+					<button class="cc-btn fa fa-cc" id="cc-btn"></button>
+					<button class="speed-btn fa fa-forward" id="speed-btn"></button>
+					<button class="vol-btn" id="vol-btn"></button>
+				    <div id="volume" class="control clearfix">
+			        	<ul id="volume_display">
+			        		<li></li><li></li><li></li><li></li><li></li><li></li>
+			          	</ul>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="caption-container">
+			<p><span>Now that we've looked at the architecture of the internet, let's see how you might</span> <span>connect your personal devices to the internet inside your house.</span></p>
+			<p><span>Well there are many ways to connect to the internet, and</span> <span>most often people connect wirelessly.</span> <span>Let's look at an example of how you can connect to the internet.</span></p>
+			<p><span>If you live in a city or a town, you probably have a coaxial cable for</span> <span>cable Internet, or a phone line if you have DSL, running to the outside of</span> <span>your house, that connects you to the Internet Service Provider, or ISP.</span></p>
+			<p><span>If you live far out in the country, you'll more likely have</span> <span>a dish outside your house, connecting you wirelessly to your closest ISP, or</span> <span>you might also use the telephone system.</span></p>
+			<p><span>Whether a wire comes straight from the ISP hookup outside your house, or</span> <span>it travels over radio waves from your roof,</span> <span>the first stop a wire will make once inside your house, is at your modem.</span></p>
+			<p><span>A modem is what connects the internet to your network at home.</span> <span>A few common residential modems are DSL or</span></p>
+		</div>
+		<div id="caption-container-mobile"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/media-player.js"></script>
+</body>
+</html>
